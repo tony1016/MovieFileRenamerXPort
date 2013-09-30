@@ -28,6 +28,16 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "96A249FF17F90A30005E408E"
+               BuildableName = "MovieFileRenamerXPortTests.xctest"
+               BlueprintName = "MovieFileRenamerXPortTests"
+               ReferencedContainer = "container:MovieFileRenamerXPort.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

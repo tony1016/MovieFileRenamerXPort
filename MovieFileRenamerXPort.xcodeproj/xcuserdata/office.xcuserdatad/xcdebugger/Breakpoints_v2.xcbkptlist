@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MovieFileRenamerXPort/MovieFileRenamer.m"
+            timestampString = "402209345.899978"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "-searchMovieInTmdb:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MovieFileRenamerXPortTests/MovieFileRenamerXPortTests.m"
+            timestampString = "402211665.30757"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "-test_should_get_1_file_in_list"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[MovieFileRenamerXPortTests test_should_get_1_file_in_list]"
+                  moduleName = "MovieFileRenamerXPortTests"
+                  urlString = "file://localhost/Users/office/Objective-c/Projects/MovieFileRenamerXPort/MovieFileRenamerXPortTests/MovieFileRenamerXPortTests.m"
+                  timestampString = "402212024.393204"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "44"
+                  endingLineNumber = "44"
+                  offsetFromSymbolStart = "112">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[MovieFileRenamerXPortTests test_should_get_1_file_in_list]"
+                  moduleName = "MovieFileRenamerXPortTests"
+                  urlString = "file://localhost/Users/office/Objective-c/Projects/MovieFileRenamerXPort/MovieFileRenamerXPortTests/MovieFileRenamerXPortTests.m"
+                  timestampString = "402212024.393502"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "44"
+                  endingLineNumber = "44"
+                  offsetFromSymbolStart = "1956">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[MovieFileRenamerXPortTests test_should_get_1_file_in_list]"
+                  moduleName = "MovieFileRenamerXPortTests"
+                  urlString = "file://localhost/Users/office/Objective-c/Projects/MovieFileRenamerXPort/MovieFileRenamerXPortTests/MovieFileRenamerXPortTests.m"
+                  timestampString = "402212024.393798"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "44"
+                  endingLineNumber = "44"
+                  offsetFromSymbolStart = "3115">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MovieFileRenamerXPortTests/MovieFileRenamerXPortTests.m"
+            timestampString = "402212046.460541"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "-test_get_more_than_one_files_in_list"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
