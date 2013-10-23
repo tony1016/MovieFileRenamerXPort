@@ -7,16 +7,17 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "MovieFileRenamer.h"
 
 int main(int argc, const char * argv[])
 {
 
     @autoreleasepool {
         
-        // insert code here...
-        NSLog(@"Hello, World!");
+        
+        MovieFileRenamer* renamer=[MovieFileRenamer new];
+        [renamer handleInConsole];
         
     }
     return 0;
 }
-

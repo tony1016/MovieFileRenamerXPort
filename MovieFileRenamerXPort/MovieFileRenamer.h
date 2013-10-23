@@ -14,6 +14,8 @@
 
 -(NSArray*) getFiles;
 -(NSDictionary*) searchMovieInTmdb:(NSString*) searchKey;
+-(void) handleInConsole;
 
++(NSString*) readFromConsoleInput:(int) inputLength withPrompt:(NSString*) prompt;
 
 @end

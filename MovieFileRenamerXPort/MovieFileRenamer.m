@@ -60,7 +60,10 @@
             NSArray* paths=[fm contentsOfDirectoryAtPath:self.processPath error:nil];
             NSMutableArray* absolutePaths=[NSMutableArray new];
             for(NSString* path in paths){
-                [absolutePaths addObject:[self.processPath stringByAppendingPathComponent:path ]];
+                if (![path hasPrefix:@"."]) {
+                    [absolutePaths addObject:[self.processPath stringByAppendingPathComponent:path ]];
+                }
+                
             }
             return absolutePaths;
         } else {
@@ -70,5 +73,61 @@
         @throw [NSException exceptionWithName:@"FILE_NOT_EXISTS" reason:@"File is not exits" userInfo:nil];
     }
 }
+
+-(void) handleInConsole{
+    NSString* pathString=[MovieFileRenamer readFromConsoleInput:1024 withPrompt:@"Please input the dir or file path:"];
+    self.processPath=pathString;
+    NSArray* files=[self getFiles];
+    
+    for (NSString* filePath in files) {
+        NSString* whetherProcess=[MovieFileRenamer readFromConsoleInput:1 withPrompt:[NSString stringWithFormat:@"R U sure to process this file:%@ (y/n)",filePath]];
+        if ([whetherProcess isEqualToString:@"y"]) {
+            [self selectMovieInConsole];
+        }
+        
+        
+    }
+}
+
++(NSString*) readFromConsoleInput:(int) inputLength withPrompt:(NSString*) prompt{
+
+    printf("%s",[prompt cStringUsingEncoding:NSUTF8StringEncoding]);
+    
+    NSFileHandle *input = [NSFileHandle fileHandleWithStandardInput];
+    NSData *inputData = [NSData dataWithData:[input availableData]];
+    NSString *inputString = [[NSString alloc] initWithData:inputData
+                                                  encoding:NSUTF8StringEncoding];
+    inputString = [inputString stringByTrimmingCharactersInSet:
+                   [NSCharacterSet whitespaceAndNewlineCharacterSet]];
+
+    return inputString;
+}
+
+-(NSDictionary *) selectMovieInConsole{
+    NSString* selectedIndex=@"0";
+    while ([selectedIndex isEqualToString:@"0"]) {
+        NSString* searchKey=[MovieFileRenamer readFromConsoleInput:1024 withPrompt:@"Please input the search key:"];
+        NSArray* results=[[self searchMovieInTmdb:searchKey] valueForKey:@"results"];
+        while ([results count]==0) {
+            searchKey=[MovieFileRenamer readFromConsoleInput:1024 withPrompt:@"Please input the search key:"];
+            results=[[self searchMovieInTmdb:searchKey] valueForKey:@"results"];
+        }
+        
+        int index=1;
+        for (NSDictionary* result in results) {
+            printf("%d\t%s\t%s\t%s\n",index,
+                   [((NSString *)[result valueForKey:@"original_title"]) UTF8String],
+                   [(NSString *)[result valueForKey:@"title"] UTF8String],
+                   [(NSString *)[result valueForKey:@"release_date"] UTF8String]);
+            
+            index++;
+        }
+        printf("0\t input again\n");
+        selectedIndex=[MovieFileRenamer readFromConsoleInput:100 withPrompt:@"Please input the choice:"];
+    }
+    
+    return nil;
+}
+
 
 @end
